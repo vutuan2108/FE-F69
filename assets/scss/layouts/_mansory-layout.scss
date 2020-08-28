@@ -1,0 +1,86 @@
+/* ---- grid ---- */
+.grid {
+    @include calc('width', '100% - 10px');
+    margin: 0 auto;
+}
+
+.wp-multi-images {
+    display: block;
+     padding: 5px 0;
+    .section-count {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 2;
+        display: none;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .wp-count-img {
+        background-color: black;
+        opacity: 0;
+        transition: .3s ease-in-out;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+    .count {
+        color: #fff;
+        font-size: 38px;
+        font-weight: bold;
+        z-index: 3;
+
+        @media (max-width: 812px) {
+            font-size: 30px;
+        }
+    }
+
+    &:hover {
+        .section-count {
+            display: flex;
+
+            .wp-count-img {
+                opacity: .4;
+            }
+        }
+
+        .box-list-action{
+            opacity: 1; 
+        }
+    }
+}
+
+
+/* clear fix */
+.grid:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/* ---- .grid-item ---- */
+
+.grid-sizer,
+.grid-item {
+    width: 33.333%;
+    padding: 5px;
+}
+
+.grid-item {
+    float: left;
+}
+
+.grid-item img {
+    display: block;
+    max-width: 100%;
+}
+
+
+
+

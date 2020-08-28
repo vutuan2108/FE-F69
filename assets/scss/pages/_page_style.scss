@@ -1,0 +1,30 @@
+.main-cacular{
+    width: 100%; height: 100%; background-color: #CCCCCC; position: relative;
+}
+
+.wp-main-cacular{
+    max-width: 350px; width: 100%; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); @include border-radius(5px); background-color: var(--black); min-height: 50%;
+    padding:30px;
+}
+.wp-button-operator{
+    margin: 0 -30px;
+    .row{
+        margin: 0 -10px; padding: 0 30px;
+    }
+    [class*="col-"]{
+        padding: 0 10px; 
+    }
+    .item-operator{
+        display: inline-block; height: 57.5px; line-height: 55.5px; @include border-radius(5px); text-align: center; width: 100%; font-size: 22px; font-weight: bold;
+    } 
+}
+
+.wp-result{
+    border-bottom: 2px solid #ccc;
+    .wp-operator{
+        font-size: 20px; font-weight: bold; color: #ccc;
+    }
+    .text{
+        font-size: 45px; font-weight: bold;
+    }
+}

@@ -1,0 +1,78 @@
+// ====================================
+// VARIABLES
+// ====================================
+
+
+// ================ COLORS ================================
+
+$color-link: #096148;
+$color-blue: #096148;
+$color-scrollbar: #999;
+$color-text: #000;
+$color-text-1: #080808;
+$color-text-2: #737373;
+$color-title: #252525;
+$color-main: #c6052b;
+$bg-brown-1: #7c7c7c;
+$bg-black: #292929;
+
+$color-border: #ccc;
+// FACE96
+:root {
+    // ================================= GLOBAL VARIABLES COLORS ==================
+    // - DARK MODE COLORS
+    --dm-background: #18191A;
+    // white
+    --dm-white: #fff;
+    // blue
+    --dm-blue-1: #40AADE;
+    --dm-blue-2: #4367B0;
+    // (bg-color google)
+    --dm-blue-3: #4285F4;
+    //gray
+    --dm-gray-1: #A3A4AE;
+    // border-modal
+    --dm-gray-2: #5C5C5C;
+    // bg-post
+    --dm-gray-3: #333333;
+    --dm-gray-4: #B0B3B8;
+    --dm-default: #E4E6EB;
+    // - Default color
+    --black: #bbbaba;
+    --black-1: #3a3838;
+    --red: #BD081C;
+    // Default mode
+    --default: #59596d;
+    --border-default: #B0B3B8;
+    --gray: #828282;
+    --bg-default: #40AADE;
+}
+
+
+// Dimensions
+
+$var-height-header: 80px;
+
+$screen-xs:         480px !default;
+$screen-xs-min:     $screen-xs !default;
+$screen-sm:         768px !default;
+$screen-sm-min:     $screen-sm !default;
+$screen-md:         992px !default;
+$screen-md-min:     $screen-md !default;
+$screen-lg:         1200px !default;
+$screen-lg-min:     $screen-lg !default;
+$screen-xl: 		1440px;
+$screen-xl-min:     $screen-xl !default;
+
+$screen-xs-max:			($screen-sm-min - 1) !default;
+$screen-sm-max:			($screen-md-min - 1) !default;
+$screen-md-max:			($screen-lg-min - 1) !default;
+$screen-lg-max:			($screen-xl-min - 1) !default;
+
+// Hidden
+
+.hidden-lg{
+    @media (min-width: 1024px){
+        display: none;
+    }
+}

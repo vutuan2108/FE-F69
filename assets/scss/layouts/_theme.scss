@@ -1,0 +1,781 @@
+// =============== DEFAULT STYLE =================
+body:not(.dark-mode) {
+    .section-post {
+        .post {
+            @include box-shadow(0, 0, 4px,0, #656565);
+            @include border-radius(5px);
+        }
+    }
+
+    .section-post-new {
+        border: 1px solid var(--border-default);
+        background-color: transparent;
+
+        textarea {
+            border-color: var(--border-default);
+        }
+    }
+
+    .setting {
+        .dropdown-form {
+            border: 1px solid var(--default);
+
+            .item-visible {
+                color: var(--default);
+            }
+
+            &.show-select {
+                .list-item {
+                    .item-select {
+                        color: var(--default);
+
+                        &:hover {
+                            background-color: #e6e6e6;
+                        }
+                    }
+                }
+            }
+        }
+
+        input {
+            border: 1px solid var(--default);
+        }
+
+        ::placeholder {
+            color: var(--default);
+        }
+
+        .item-social {
+            border-color: var(--default);
+
+            .title-item {
+                color: var(--default);
+                font-weight: 600;
+            }
+
+            &.connected {
+                background-color: #7f7f7f;
+
+                .title-item {
+                    color: var(--dm-white);
+                }
+
+                .link-action {
+                    color: var(--dm-white);
+                }
+            }
+        }
+    }
+
+    .modal {
+        .modal-content {
+            background-color: #f7f8f9;
+
+            .text, label {
+                color: var(--default);
+            }
+        }
+
+        input {
+            background-color: transparent;
+            border-color: var(--border-default);
+            color: var(--default);
+        }
+
+        .modal-header {
+            color: var(--default);
+
+            .close {
+                &:before, &:after {
+                    background-color: var(--default);
+                }
+            }
+        }
+
+        .modal-header, .modal-body {
+            &:before {
+                background-color: var(--border-default);
+            }
+        }
+
+        .modal-footer {
+            .title {
+                color: var(--default);
+            }
+        }
+    }
+
+    .header-search {
+        .input-header {
+            background: transparent;
+            color: var(--default);
+        }
+    }
+
+    .no-post-data {
+        background-color: transparent;
+        border: 1px solid var(--border-default);
+    }
+
+    .top-info-left {
+        a {
+            &:hover, &.active {
+                text-decoration: none;
+                background-color: #e6e6e6;
+            }
+        }
+    }
+
+    .list-menu-setting {
+        .item-menu {
+            &.active, &:hover {
+                background-color: #e6e6e6;
+                text-decoration: none;
+            }
+        }
+    }
+
+    .list-menu {
+        &.show-menu {
+            background-color: var(--bg-default);
+            padding: 0 15px;
+
+            &:before {
+                content: '';
+                bottom: 0;
+                height: 1px;
+                background-color: var(--border-default);
+                position: absolute;
+                left: 5px;
+                right: 5px;
+            }
+
+            .item-menu {
+                & + .item-menu {
+                    border-top: 1px solid var(--dm-white);
+                }
+                &:first-child{
+                    border-top: 1px solid var(--dm-white);
+                }
+            }
+        }
+    }
+
+    .box-small-devices {
+        background: transparent;
+    }
+
+
+
+    .section-user {
+        .comment-user {
+            textarea {
+                border-bottom: 1px solid var(--border-default);
+            }
+        }
+    }
+
+    .box-small-devices {
+        @media (max-width: 991px) {
+            border-color: var(--border-default);
+
+            .popular, .popular:before {
+                color: var(--default);
+            }
+        }
+    }
+
+    .list-popular.show {
+        .wp-popular {
+            border-color: var(--border-default);
+            background-color: #f7f8f9;
+        }
+    }
+
+    .wp-info-user {
+        .list-action.show-list {
+            background-color: #f7f8f9;
+
+            .item-action {
+                a {
+                    color: var(--default);
+
+                    &:hover {
+                        background-color: #e6e6e6;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.to-top{
+    width: 40px; height: 40px;
+    border: 1px solid #A8ABA9;
+    @include border-radius(5px); position: fixed;
+    bottom: 10px; right: 10px; opacity: .5; transition: opacity .2s ease-in; z-index: 999;
+    display: none;
+    .fa-arrow-up{
+        @include middle-child();
+        font-weight: bold; color: var(--default); font-size: 22px;
+    }
+    &:hover{
+        opacity: 1;
+    }
+}
+
+
+
+
+// ============ DARK MODE STYLE ==========
+.dark-mode {
+    background-color: var(--dm-background);
+
+    header {
+        background-color: initial;       
+    }
+
+    .button {
+        &.sign-up, &.button-post, &.share-fb, &.button-post, &.save-changes {
+            border: 1px solid var(--dm-default);
+            color: var(--dm-default);
+
+            &:hover {
+                border-color: var(--dm-blue-1);
+                background-color: var(--dm-blue-1);
+                color: var(--dm-white);
+            }
+        }
+
+        &.share-fb:hover {
+            i {
+                color: var(--dm-white);
+            }
+        }
+
+        &.share-pinterest, &.button-cancel {
+            border: 1px solid var(--dm-default);
+            color: var(--dm-default);
+
+            &:hover {
+                border-color: var(--red);
+                background: var(--red);
+                color: var(--dm-white);
+
+                i {
+                    color: var(--dm-white);
+                }
+            }
+        }
+
+        &.login {
+            color: var(--dm-default);
+        }
+    }
+
+
+    .list-menu {
+        .item-menu {
+            a {
+                color: var(--dm-default);
+
+                &:hover {
+                    color: var(--dm-default);
+                }
+            }
+            &:hover, &.active{
+                a:before{
+                    background-color: var(--dm-default);
+                }
+            }
+        }
+    }
+
+    header {
+        .header-search {
+            .input-header {
+                color: var(--dm-default);
+                border: 1px solid var(--border-default);
+            }
+
+            i {
+                color: var(--dm-default);
+            }
+        }
+    }
+
+    .text-bg-dark {
+        color: var(--dm-white);
+
+        &:hover, &:focus {
+            color: var(--dm-white);
+        }
+    }
+
+    .top-info-left {
+        a {
+            color: var(--dm-default);
+
+            &:hover, &.active {
+                background-color: #333;
+                color: var(--dm-default);
+            }
+        }
+    }
+
+    .post {
+        @include border-radius(5px);
+        background-color: #333;
+        &-title {
+            color: var(--dm-default);
+            padding: 0 10px 10px 10px;
+        }
+    }
+
+    .info-user {
+        &.info-post {
+            .right-info-user {
+                .name-user, .name-group {
+                    color: var(--dm-default);
+                }
+
+                .time-post, .fa-caret-right {
+                    color: var(--dm-default);
+                }
+            }
+
+            .content-post {
+                color: var(--dm-default);
+            }
+        }
+    }
+
+    .section-post-new {
+        textarea {
+            border: 1px solid var(--dm-default);
+            background-color: transparent;
+        }
+    }
+
+    ::placeholder {
+        color: var(--dm-default);
+    }
+
+    .section-action {
+         .wp-action i {
+            color: var(--dm-default);
+        }
+    }
+
+    .section-post-new{
+        .title-section{
+            color: var(--dm-default);
+        }
+    }
+
+    .post-action-count {
+        a {
+            color: var(--dm-default);
+        }
+    }
+
+    .post-action {
+        [class^="action-"] {
+            color: var(--dm-default);
+            border: 1px solid var(--dm-default);
+
+            i {
+                color: var(--dm-default);
+            }
+
+            &:not(.action-share){
+                i{
+                    color: var(--dm-default);
+                }
+            }
+        }
+
+        .action-like:hover, .action-like.active {
+            border: 1px solid var(--dm-blue-1);
+            color: var(--dm-blue-1);
+
+            i {
+                color: var(--dm-blue-1);
+            }
+        }
+
+        .action-dislike:hover, .action-dislike.active {
+            border: 1px solid var(--red);
+            color: var(--red);
+
+            i {
+                color: var(--red);
+            }
+        }
+
+        .action-comment {
+            &:hover, &:focus, i {
+                border-color: var(--dm-default);
+                color: var(--dm-default);
+            }
+        }
+
+        .action-share {
+            .share {
+                &:before{
+                    color: var(--dm-default);
+                }
+                &:hover, &:focus {
+                    &:before {
+                        color: var(--dm-default);
+                    }
+                }
+            }
+        }
+    }
+
+    .post-action {
+        .action-comment:hover {
+            i {
+                color: var(--dm-default);
+            }
+        }
+
+        .action-share:hover {
+            color: var(--dm-default);
+            border-color: var(--dm-default);
+        }
+    }
+
+    .section-user {
+        .content-comment {
+            .info-user {
+                color: var(--dm-default);
+
+                .name-user {
+                    color: var(--dm-default);
+
+                    &:hover {
+                        color: var(--dm-default);
+                    }
+                }
+            }
+
+            .text-comment {
+                .text {
+                    color: var(--dm-default);
+                }
+            }
+
+            .post-action {
+                .reply {
+                    color: var(--dm-default);
+
+                    &:hover {
+                        color: var(--dm-default);
+                    }
+                }
+            }
+        }
+    }
+
+    .read-more {
+        color: var(--dm-default);
+    }
+
+    .section-popular-detail {
+        .top-popular {
+            .info-popular {
+                color: var(--dm-default);
+            }
+        }
+
+        .text {
+            color: var(--dm-default);
+        }
+    }
+
+    .main-list {
+        .item-list {
+            a {
+                color: var(--dm-default);
+            }
+
+            &:hover, &.active {
+                a:before {
+                    background-color: var(--dm-default);
+                }
+            }
+        }
+    }
+
+    .modal-create {
+        textarea {
+            border-color: var(--black-1);
+            color: var(--black-1);
+            background-color: #fff;
+        }
+
+        ::placeholder {
+            color: var(--black-1);
+        }
+
+        .button {
+            &.button-cancel, &.button-post {
+                color: var(--dm-default);
+                border-color: var(--dm-default);
+            }
+
+            &.button-cancel:hover {
+                color: var(--dm-white);
+                border-color: var(--red);
+            }
+
+            &.button-post:hover {
+                color: var(--dm-white);
+                border-color: var(--dm-blue-1);
+            }
+        }
+
+        .modal-content {
+            background-color: #333;
+            border: 0;
+        }
+    }
+
+    .wp-info-user {
+        .list-action.show-list {
+            .item-action {
+                a {
+                    color: var(--dm-default);
+                }
+            }
+        }
+    }
+
+    .list-menu-setting {
+        .item-menu {
+            a {
+                color: vaR(--dm-default);
+            }
+
+            &:hover, &.active {
+                a {
+                    color: var(--dm-default);
+                    background-color: #333;
+
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .setting-page {
+        .title-setting {
+            color: var(--dm-default);
+        }
+
+        label, .small-text {
+            color: var(--dm-default);
+        }
+
+        .dropdown-form.show-select {
+            .list-item {
+                .item-select {
+                    color: var(--dm-default);
+                }
+            }
+        }
+
+        ::placeholder {
+            color: var(--black-1);
+        }
+
+        .item-social {
+            .title-item {
+                color: var(--dm-default);
+            }
+
+            .link-action {
+                color: var(--dm-blue-1);
+
+                &:hover {
+                    color: var(--dm-blue-1);
+                }
+            }
+        }
+    }
+
+    .notification {
+        i {
+            color: var(--dm-default);
+        }
+
+        .count-notification {
+            color: var(--dm-default);
+        }
+    }
+
+    .change-mode {
+        &:before {
+            color: var(--dm-default);
+        }
+    }
+
+    .wp-multi-images {
+        background-color: #333333;
+    }
+
+    .post {
+        .main-post {
+            background-color: #333333;
+        }
+    }
+
+    .list-notifications {
+        background-color: #18191A;
+
+        &:before {
+            background-color: #18191A;
+        }
+
+        .title {
+            color: var(--dm-default);
+        }
+    }
+
+    .comment-item {
+        .main-comment {
+            background-color: #525252;
+
+            .count-action {
+                background-color: #525252;
+
+                .like, .dislike {
+                    color: var(--dm-default);
+                }
+            }
+        }
+    }
+
+    .action-share {
+        .list-share.show-list {
+            background-color: #333;
+            border-color: var(--dm-default);
+
+            &:before {
+                background-color: #333;
+                border-color: var(--dm-default);
+            }
+
+            .item-share {
+                a {
+                    color: var(--dm-default);
+                }
+            }
+        }
+    }
+
+    header {
+        .logo {
+            color: var(--dm-default);
+        }
+    }
+
+    .wp-info-user {
+        .list-action {
+            &.show-list, &.show-list:before {
+                background-color: #18191A;
+                border-color: var(--border-default);
+            }
+
+            &.show-list {
+                .title {
+                    color: var(--dm-default);
+                }
+            }
+        }
+    }
+
+    .to-top {
+        border-color: var(--dm-default);
+        opacity: .4;
+
+        .fa-arrow-up {
+            color: var(--dm-default);
+        }
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    .dropdown-form {
+        &.show-select {
+            .list-item {
+                .item-select {
+                    label {
+                        input:checked + .text {
+                            background-color: #333;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .list-popular {
+        &.show {
+            .wp-popular {
+                border-color: var(--dm-default);
+            }
+        }
+    }
+
+    .post-detail{
+        .post{
+            .bottom-post{
+                .wp-bottom-post-action{
+                    & + .main-comments{
+
+                    }
+                }
+            }
+        }
+    }
+
+    .section-user{
+        .comment-user{
+            textarea{
+                background-color: #333; color: var(--dm-default);
+                border-bottom:1px solid var(--border-default)
+            }
+        }
+    }
+
+    .upload-img{
+        color: var(--dm-default);
+    }
+
+  .wp-upload{
+      .upload{
+          color: var(--dm-white);
+      }
+    }
+
+  .emojionearea{
+        background-color: transparent;
+        .emojionearea-button > div {
+            background-image: url("../images/icon/smile-darkmode.png")!important;
+        }
+
+        .emojionearea-editor{
+            color: var(--dm-default);
+        }
+        .emojionearea-editor:empty:before{
+            color: var(--dm-default);
+        }
+    }
+}

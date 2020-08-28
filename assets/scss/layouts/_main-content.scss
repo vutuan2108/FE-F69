@@ -1,0 +1,19 @@
+.section-right {
+    .col-lg-6 {
+        padding: 0 5px;
+    }
+}
+
+.main-page:not(.wp-settings) {
+    @media (min-width: 1024px) {
+        .section-left {
+            flex: 0 0 20%;
+            max-width: 20%;
+        }
+
+        .section-middle {
+            flex: 0 0 55%;
+            max-width: 100%;
+        }
+    }
+}

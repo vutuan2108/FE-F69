@@ -1,0 +1,18 @@
+.icon-default, %icon-default {
+  position: relative;
+  &:before {
+    content: ''; background-repeat: no-repeat; background-size: contain; display: inline-block;
+  }
+}
+
+.icon-utility-xs, %icon-utility-xs {
+  &:before {
+    background-image: url("../../images/icon/icon-utility-xs.png"); width: 24px; height: 25px;
+  }
+}
+
+.icon-dark-mode-1, %icon-dark-mode-1{
+  &:before{
+    background-image: url("../../assets/images/icon/3.png"); width: 14px; height: 22px;
+  }
+}

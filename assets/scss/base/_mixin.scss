@@ -1,0 +1,98 @@
+
+%position-center-box{
+  position:absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+}
+
+//.position(@position;@left;@top;@right;@bottom){
+//  position: @position;
+//  left: @left;
+//  top: @top;
+//  bottom: @bottom;
+//  right: @right;
+//}
+//
+//.position-right-bottom(@right, @bottom) {
+//  position: absolute;
+//  right: @right;
+//  bottom: @bottom;
+//}
+//
+//.position-left-bottom(@left, @bottom) {
+//  position: absolute;
+//  left: @left;
+//  bottom: @bottom;
+//}
+//
+//.position-top-left(@top, @left) {
+//  position: absolute;
+//  left: @left;
+//  top: @top;
+//}
+//
+//.position-top-right(@top, @right) {
+//  position: absolute;
+//  right: @right;
+//  top: @top;
+//}
+//
+//.position-center(@w, @h){
+//  position:absolute;
+//  top: 50%;
+//  left:50%;
+//  width:@w;
+//  height:@h;
+//  margin:-@h/2 0 0 -@w/2;
+//}
+//
+//// border-radius
+//.border-top-radius(@radius: 2px) {
+//  border-top-right-radius: @radius;
+//  border-top-left-radius: @radius;
+//}
+//
+//.border-right-radius(@radius: 2px) {
+//  border-bottom-right-radius: @radius;
+//  border-top-right-radius: @radius;
+//}
+//
+//.border-bottom-radius(@radius: 2px) {
+//  border-bottom-right-radius: @radius;
+//  border-bottom-left-radius: @radius;
+//}
+//
+//.border-left-radius(@radius: 2px) {
+//  border-bottom-left-radius: @radius;
+//  border-top-left-radius: @radius;
+//}
+//
+//._flex() {
+//  -ms-box-orient: horizontal;
+//  display: -webkit-box;
+//  display: -moz-box;
+//  display: -ms-flexbox;
+//  display: -moz-flex;
+//  display: -webkit-flex;
+//  display: flex;
+//}
+//
+//.full-height() {
+//._flex;
+//  flex-direction: column;
+//  flex: 1;
+//}
+//
+//.item-center() {
+//._flex;
+//  align-items: center;
+//  justify-content: center;
+//}
+
+@mixin box-shadow( $horiz : .5em , $vert : .5em , $blur : 0px , $spread : 0px , $color : #000000 ){
+  -webkit-box-shadow: $horiz $vert $blur $spread $color;
+  -moz-box-shadow: $horiz $vert $blur $spread $color;
+  box-shadow: $horiz $vert $blur $spread $color;
+}

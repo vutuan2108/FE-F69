@@ -1,0 +1,25 @@
+// ====================================
+// Modules: Utilities
+// ====================================
+
+
+@import 'compass/css3';
+
+$fs-default: 16px;
+
+html {
+	background-color: #fff;
+}
+
+body {
+	line-height: 1.3; font-size: $fs-default; color: #282828; margin: 0 auto;
+}
+
+img {
+	max-width: 100%;
+}
+
+@import 'base/_module';
+@import 'components/_module';
+@import 'layouts/_module';
+@import 'pages/_module';

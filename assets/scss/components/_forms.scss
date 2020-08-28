@@ -1,0 +1,274 @@
+
+.wp-form-login{
+  padding-top: 200px;
+}
+
+
+
+.form-group{
+  position: relative;
+  & + .form-group{
+    margin: 35px 0 0 0;
+  }
+}
+.form-search{
+  .title-dropdown{
+    padding: 0; border: 0px;
+  }
+  .input-form{
+     border: 0px; padding: 0 30px 0 20px;
+     &.no-icon{
+       padding: 0;
+     }
+  }
+}
+
+
+
+
+
+// BUTTON STYLE
+.button-add{
+  border: 1px solid #78D245; font-weight: bold; @include border-radius(5px); background-color: #5CB360;
+  color: var(--black);
+  &:hover{
+    background-color: var(--black); color: #5CB360; text-decoration: none;
+  }
+}
+
+.button-close{
+  &:before{
+    content: ''; background-image: url('../../images/icon-check.png'); background-size: contain; background-repeat: no-repeat; background-position: center; display: inline-block;
+  }
+}
+
+.btn-link{
+  background-color: #1571A5; color: var(--black); font-weight: bold;
+  &:hover{
+    border: 1px solid #1571A5; background-color: var(--black); color: #1571A5;
+  }
+}
+.btn-clear{
+  border: 1px solid #d63131; background-color: #d63131; color: var(--black); font-weight: bold;
+  &:hover{
+    color: #d63131; background-color: var(--black);
+  }
+}
+.button-back{
+  border: 1px solid black; color: black; font-weight: bold; @include border-radius(5px);
+  &:hover{
+    background-color: var(--black);
+  }
+}
+
+
+
+// PAGE STYLE
+.list-result{
+  li + li{
+    margin: 20px 0 0 0;
+  }
+}
+
+
+
+
+// .title_animation{
+//   font-size: 80px;
+//   font-weight: bold;
+//   background-image: url("../../images/bg_animation.jpg");
+//   -webkit-background-clip: text;
+//   -moz-background-clip: text;
+//   color: transparent;
+//   animation: bg_animate 10s ease-in infinite;
+// }
+
+// @keyframes bg_animate{
+//   0%{
+//     background-position: 0 0;
+//   }
+//   50%{
+//     background-position: 0% 90%;
+//   }
+//   100%{
+//     background-position: 0 0 ;
+//   }
+// }
+
+// STYLE BUTTON
+// .button-effect{
+//   border: 1px solid black; @include border-radius(5px);
+//   font-weight: bold;
+//   background-color: transparent;
+//   background-image: url("../../images/bg_animation.jpg");
+//   -webkit-background-clip: border-box;
+//   animation: bg_move 10s ease infinite;
+// }
+
+// @keyframes bg_move{
+//   0%{
+//     background-position: 0 0;
+
+//   }
+//   50%{
+//     background-position: 0 100%;
+
+//   }
+//   55%{
+//     background-position: 0 0;
+ 
+//   }
+
+// }
+
+
+
+// ==================== FACE68 style 
+
+.input-form{
+  height: 40px; line-height: 38px; font-size: 16px; border: 1px solid var(--border-default); width: 100%; padding: 0 15px; color: var(--black);
+  background-color: #f7f8f9 ; @include border-radius(5px);
+  &:focus{
+    outline: 0;
+  }
+}
+
+.dropdown-frames:not(.wp-setting){
+  border: 1px solid var(--border-default);
+  background-color: #f7f8f9;
+  &:before{
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: #f7f8f9;
+    border: 1px solid var(--border-default);
+    position: absolute;
+    right: 10px;
+    top: -5px;
+    transform: rotate(45deg);
+    border-bottom: 0;
+    border-right: 0;
+    z-index: 1;
+  }
+}
+
+.section-form-search{
+  position: relative; margin: 0 0 40px 0; @include border-radius(5px);
+  .input-search{
+   color: var(--default); padding:0 15px 0 40px;
+
+   @media (max-width: 480px){
+     padding: 0 15px 0 30px;
+   }
+  }
+
+  .button-form-search{
+    position: absolute; top: 0; right: 0;
+    text-align: center; border:1px solid var(--border-default); padding:  0 20px;
+    @include border-radius(0 5px 5px 0); color: var(--default);
+    font-weight: 500;
+    &:hover{
+      background-color: var(--dm-blue-1); color: #fff;
+    }
+  }
+
+  .wp-input-search{
+   position: relative;
+   .fa-search{
+     position: absolute; top: 50%; left: 10px; transform: translate(5px, -50%);
+     color: var(--default);
+
+     @media (max-width: 480px){
+       left: 5px;
+     }
+   }
+  }
+}
+
+.shadow-form{
+  box-shadow: 1px 1px 3px rgba(159, 160, 160, .7);
+}
+
+// PAGINATION STYLE
+
+.pagination{
+  margin: 40px 0 0 0;
+
+  @media (max-width: 480px){
+    margin: 25px 0 0 0;
+  }
+
+  a, .link-dot{
+    color: var(--default); font-weight: 600;
+  }
+  .nav-pagination{
+    width: 100%;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+
+  .next, .prev{
+    position: relative;
+    i{
+      position: absolute;
+      bottom: 2px;
+    }
+  }
+
+  .next{
+    padding-right: 30px;
+    i{
+      right: 0;
+    }
+  }
+
+  .prev{
+    padding-left: 30px;
+    i{
+      left: 0;
+    }
+  }
+
+  .item-prev{
+    float: left;
+  }
+
+  .item-next{
+    float: right;
+  }
+
+  .link-dot{
+    margin: 0;
+  }
+
+  .item-pagination{
+    .link{
+      color: var(--default);
+    }
+
+    @media (max-width: 480px){
+      &:not(.show-mobile):not(.item-prev):not(.item-next):not(.section-main-pagination){
+        display: none;
+      }
+    }
+
+    &.show-mobile{
+      
+      .current-page:after{
+        content: '/'; margin: 0 5px;
+      }
+    }
+  }
+
+  .main-pagination{
+    .item-pagination{
+      float: left;
+      padding: 0 15px;
+    }
+    &:before{
+      content: ''; clear: both;
+    }
+  }
+}
+
+
